@@ -1,0 +1,8 @@
+service: () -> {
+    createEvent: (principal, record {id:principal; logo:text; name:text; category:text; transactions:vec record {pic:text; challenger:principal}; price:nat; location:text}) -> (bool);
+    getAllEvents: () -> (vec record {id:principal; logo:text; name:text; category:text; transactions:vec record {pic:text; challenger:principal}; price:nat; location:text}) query;
+    getAllTransactions: (principal) -> (vec record {pic:text; challenger:principal}) query;
+    getEventByUser: (principal) -> (vec record {id:principal; logo:text; name:text; category:text; transactions:vec record {pic:text; challenger:principal}; price:nat; location:text}) query;
+    getEvents: (int32, int32) -> (vec record {id:principal; logo:text; name:text; category:text; transactions:vec record {pic:text; challenger:principal}; price:nat; location:text}) query;
+    getTransactions: (principal, int32, int32) -> (vec record {pic:text; challenger:principal}) query;
+}

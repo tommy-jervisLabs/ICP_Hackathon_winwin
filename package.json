@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "dfx_install": "DFX_VERSION=0.15.0 sh -ci \"$(curl -fsSL https://sdk.dfinity.org/install.sh)\"",
+        "replica_start": "dfx start --background",
+        "replica_stop": "dfx stop",
+        "canister_deploy_local": "dfx deploy win_win",
+        "canister_deploy_mainnet": "dfx deploy --network ic win_win",
+        "canister_uninstall": "dfx canister uninstall-code win_win",
+        "canister_call_get_message": "dfx canister call win_win getMessage",
+        "canister_call_set_message": "dfx canister call win_win setMessage '(\"Hello world!\")'"
+    },
+    "dependencies": {
+        "@mui/icons-material": "^5.14.14",
+        "@vitejs/plugin-react-refresh": "^1.3.6",
+        "azle": "0.18.4"
+    }
+}
